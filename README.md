@@ -81,3 +81,17 @@ Verify that the fixed laser scan indices match your scanner:
 
 - Right: `265:275`
 - Front: `0:5` and `355:360`
+
+## Limitations
+
+- Integral and derivative calculations use per-scan updates
+  without elapsed-time scaling.
+- Wall-following angular velocity is not limited.
+- Scan sectors depend on the scanner's layout.
+- No scan timeout is implemented; the latest command continues
+  to be published if scan messages stop.
+- Obstacle handling uses a fixed turn command.
+
+## Author
+
+Mirza Taimoor Sultan Baig
